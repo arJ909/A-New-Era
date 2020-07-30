@@ -1,0 +1,26 @@
+on_actions = {
+  on_startup = {
+		effect = {
+			every_state = {
+				set_country_flag = not_estate_flag
+			}
+		}
+	}
+  
+  on_daily = {
+     add_to_array = {
+        array = list_of_estate_states
+       every_state = { limit = { has_country_flag = estate_flag }}
+     }
+     
+     
+     every_country = {
+          add_to_array = {
+            
+          }
+          has_country_flag 
+          set_variable = {estate_var = {}
+          divide_variable = {estate_var = 50}
+     }
+  }
+}
